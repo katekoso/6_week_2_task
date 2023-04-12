@@ -1,6 +1,6 @@
 .container {
     display:grid;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     grid-template-areas: "header header header"
                          "main main sidebar"
@@ -8,7 +8,7 @@
                          "main main sidebar"
                          "footer footer footer";
     grid-template-columns: 1fr 1fr 30%;
-    grid-template-rows: 70px 1fr 1fr 1fr 150px;
+    grid-template-rows: 70px 1fr 1fr 1fr minmax(150px, auto);
 }
 
 .header {
@@ -74,10 +74,11 @@
 }
 
 .footer-content {
+    display: grid;
     box-sizing: border-box;
     background-color: azure;
     height: 70%;
     width: 330px;
-    text-align: center;
-    padding: 20px 0px 0px 0px;
+    align-content: center;
+    justify-content: center;
 }
